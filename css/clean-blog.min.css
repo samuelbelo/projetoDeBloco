@@ -344,3 +344,105 @@ footer .copyright{
     font-size:16px;
     padding:25px 35px
 }
+#title{
+    overflow:hidden;
+    color:#fff;
+    mix-blend-mode:difference;
+    padding:30px calc(15% - 20px);
+  }
+  @import url('https://fonts.googleapis.com/css?family=Kanit:800|Mr+Dafoe');
+
+  // Color
+  $c-base: #222;
+  $bg-color: #53e3a6;
+  $bg-img: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  
+  // Type
+  $enable-fontSmoothing: true;
+  $b-fontSize: 1.6rem;
+  $b-fontFamily: Helvetica, Arial, sans-serif;
+  $b-fontWeight: normal;
+  $b-lineHeight: 1.5;
+  
+  $Title-color: saturate(lighten(#51c1a4, 6), 8);
+  $Title-sub-color: #fff;
+  
+  // ===================================
+  // Basic
+  //
+  
+  html {
+    font-size: 62.5%;  
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* body {
+    color: $c-base;
+    font-size: $b-fontSize;
+    font-family: $b-fontFamily;
+    font-weight: $b-fontWeight;
+    line-height: $b-lineHeight;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @if ($enable-fontSmoothing) {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    background-color: $bg-color;
+    background-image: $bg-img;
+  } */
+  
+  
+  // ==============================
+  // Typography
+  
+  
+  .Header {
+    text-align: center;
+  }
+  
+  .Header-sub {
+    opacity: 0.4;
+    // mix-blend-mode: overlay;
+  }
+  
+  .Title {
+    @include responsive-font(15vw, 72px, 126px, 50px);
+    color: $Title-color;
+    font-family: 'Kanit', Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 0.7;
+    text-transform: uppercase;
+    position: relative;
+    margin: 0.2em;
+    text-shadow: 0.02em 0.02em 0.02em rgba(black, 0.08);
+    filter: drop-shadow(0.045em 0.045em 0.04em rgba(black, 0.21));
+  }
+  
+  .Title-sub {
+    color: $Title-sub-color;
+    font: 200 0.45em/1 "Mr Dafoe", serif;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    text-shadow: 0.02em 0.02em 0.02em rgba(black, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    mix-blend-mode: overlay;
+  }
+  
+  .SubHead {
+    @include responsive-font(1.5vw, 10px, 12px, 12px);
+    color: inherit;
+    font-weight: bold;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }

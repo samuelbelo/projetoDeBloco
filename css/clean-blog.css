@@ -418,3 +418,9 @@ footer .copyright {
   font-size: 16px;
   padding: 25px 35px;
 }
+#title{
+  overflow:hidden;
+  color:#fff;
+  mix-blend-mode:difference;
+  padding:30px calc(15% - 20px);
+}
